@@ -14,7 +14,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FundamentalPlayGround
+namespace FundamentalPlayGround.HR
 {
     public class Employee
     {
@@ -23,7 +23,7 @@ namespace FundamentalPlayGround
         private const int MIMINALHOURSWORKED = 1;
         private string _FirstName = "";
         private string _LastName = "";
-        private string _Email = "" ;
+        private string _Email = "";
         private double _hoursWorked;
         private double _Wage;
         private double _HourlyRate;
@@ -35,11 +35,12 @@ namespace FundamentalPlayGround
 
         public EmployeeType EmployeeType
         {
-            get { return _EmployeeType;}
+            get { return _EmployeeType; }
             set { _EmployeeType = value; }
         }
 
-        public string FirstName {
+        public string FirstName
+        {
             get { return _FirstName; }
             set { _FirstName = value; }
         }
@@ -47,18 +48,19 @@ namespace FundamentalPlayGround
         public string LastName
         {
             get { return _LastName; }
-            set { _LastName = value; }  
+            set { _LastName = value; }
         }
 
         public string Email
-        { 
+        {
             get { return _Email; }
             set { _Email = value; }
         }
 
-        public double HoursWorked {
-            get {return _hoursWorked; }
-            set { _hoursWorked = value;}
+        public double HoursWorked
+        {
+            get { return _hoursWorked; }
+            set { _hoursWorked = value; }
         }
 
         public double Wage
@@ -109,15 +111,15 @@ namespace FundamentalPlayGround
         /// 
 
         //Methods
-        public double CalculateRecievedWages(double pHoursWorked , double pHourlyRate)
+        public double CalculateRecievedWages(double pHoursWorked, double pHourlyRate)
         {
-            
+
 
             //Not Needed but I want it in
             HourlyRate = pHourlyRate;
             HoursWorked = pHoursWorked;
 
-            return (pHourlyRate * pHoursWorked);
+            return pHourlyRate * pHoursWorked;
         }
 
         public void PerformWorked()

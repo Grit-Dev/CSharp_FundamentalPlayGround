@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FundamentalPlayGround
+namespace FundamentalPlayGround.HR
 {
     public enum EmployeeType
     {
         Sales,
         Manager,
-        Research, 
+        Research,
         StoreManager
     }
 }

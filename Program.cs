@@ -6,6 +6,7 @@
  */
 
 using FundamentalPlayGround;
+using FundamentalPlayGround.HR;
 using System.Diagnostics.Metrics;
 using System.Net.WebSockets;
 using System.Security.Cryptography.X509Certificates;

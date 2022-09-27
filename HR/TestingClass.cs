@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FundamentalPlayGround
+namespace FundamentalPlayGround.HR
 {
     public class TestingClass
     {
         public int TwoPlusTwo()
         {
             return 2 + 2;
-            
+
         }
 
         public void ChapterOneToThree()
@@ -61,16 +61,16 @@ namespace FundamentalPlayGround
 
         }
 
-        public  void TestingBoolValueWithAge65()
+        public void TestingBoolValueWithAge65()
         {
             int age = 65;
 
-            bool isItTrue = (age == 65) && (age > 64);
+            bool isItTrue = age == 65 && age > 64;
 
             Console.WriteLine($"Testing bool value if age is 65 and greater than 64: {isItTrue} \n");
         }
 
-        public  void SimpleIfStatementFundamental()
+        public void SimpleIfStatementFundamental()
         {
             int userInput = 0;
 
@@ -91,7 +91,7 @@ namespace FundamentalPlayGround
             }
         }
 
-        public  void SwitchStatementFundamentals()
+        public void SwitchStatementFundamentals()
         {
             const string NAMEONE = "PAUL";
             const string NAMETWO = "PAUL2";
@@ -128,13 +128,13 @@ namespace FundamentalPlayGround
 
         }
 
-        public  void SimpleWhileLoopIteration()
+        public void SimpleWhileLoopIteration()
         {
 
 
         }
 
-        public  void IteratonsFundamentals()
+        public void IteratonsFundamentals()
         {
             int counter = 0;
 
@@ -148,7 +148,7 @@ namespace FundamentalPlayGround
 
         }
 
-        public  void DoWhileLoopFundamental()
+        public void DoWhileLoopFundamental()
         {
             Console.WriteLine("A simple do while loop: ");
 
@@ -170,7 +170,7 @@ namespace FundamentalPlayGround
 
         }
 
-        public  void ForLoopFundamentalsBasic()
+        public void ForLoopFundamentalsBasic()
         {
 
             //To Do: 
@@ -184,7 +184,7 @@ namespace FundamentalPlayGround
             }
         }
 
-        public  void TestingForEachLoop()
+        public void TestingForEachLoop()
         {
             int[] myIntArray = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
             string[] myStringArray = { "This", "Is", "A", "Sentence" };
@@ -207,7 +207,7 @@ namespace FundamentalPlayGround
             Console.WriteLine();
         }
 
-        public  void BubbleSort()
+        public void BubbleSort()
         {
             Random random = new Random();
             int randomNumberHolder = 0;
@@ -264,7 +264,7 @@ namespace FundamentalPlayGround
             }
         }
 
-        public  void FundementalObjectCreatedFromAnotherClassFromFile()
+        public void FundementalObjectCreatedFromAnotherClassFromFile()
         {
             var testingAClassExample = new TestingClass();
 
@@ -274,7 +274,7 @@ namespace FundamentalPlayGround
 
         }
 
-        public  void SwappingVariables()
+        public void SwappingVariables()
         {
             int a = 3;
             int b = 2;
@@ -288,7 +288,7 @@ namespace FundamentalPlayGround
             Console.WriteLine($"B should be 2 {b}");
         }
 
-        public  void ComparingStringTypes()
+        public void ComparingStringTypes()
         {
 
             string nameOne = "Paul";
@@ -309,7 +309,7 @@ namespace FundamentalPlayGround
             Console.WriteLine($"NameOne.Equals(nameEquals) Should be true: {isTrueTwo}");
         }
 
-        public  void UsingATryParseWithWhileLoopFundamentals()
+        public void UsingATryParseWithWhileLoopFundamentals()
         {
             //parsing a string with some while loops thrown in
 
