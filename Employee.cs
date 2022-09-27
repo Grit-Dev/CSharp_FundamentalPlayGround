@@ -28,7 +28,6 @@ namespace FundamentalPlayGround
         private double _Wage;
         private double _HourlyRate;
         private DateTime _Birthday;
-        private bool _ResetBalance = true;
 
 
         //Properties
@@ -106,15 +105,28 @@ namespace FundamentalPlayGround
         /// <param name="pHoursWorked"></param>
         /// <param name="pHourlyRate"></param>
         /// <returns></returns>
-
+        /// 
 
         //Methods
         public double CalculateRecievedWages(double pHoursWorked , double pHourlyRate)
         {
-            double answer = 0;
+            
 
-            return answer = (pHourlyRate * pHoursWorked);
+            //Not Needed but I want it in
+            HourlyRate = pHourlyRate;
+            HoursWorked = pHoursWorked;
+
+            return (pHourlyRate * pHoursWorked);
         }
 
+        public void PerformWorked()
+        {
+            HoursWorked++;
+        }
+
+        public void ResetHoursWorked()
+        {
+            HoursWorked = 0;
+        }
     }
 }
