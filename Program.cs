@@ -135,8 +135,6 @@ namespace CSharpFundamentals
             Console.WriteLine("Testing if employee wages are correct: ");
             Console.WriteLine(employeeOne.CalculateRecievedWages(testHourlyRate, testHoursWorked));
 
-
-
         }
 
 

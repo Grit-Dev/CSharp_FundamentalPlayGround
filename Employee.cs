@@ -77,12 +77,6 @@ namespace FundamentalPlayGround
             get { return MIMINALHOURSWORKED; }
         }
 
-        public bool ResetBalance
-        {
-            get { return _ResetBalance; }
-        }
-
-
         //Constructors
         //Example only for me to refresh my memory
 
