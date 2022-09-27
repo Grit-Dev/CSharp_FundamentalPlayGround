@@ -29,8 +29,15 @@ namespace FundamentalPlayGround
         private double _HourlyRate;
         private DateTime _Birthday;
 
+        private EmployeeType _EmployeeType;
 
         //Properties
+
+        public EmployeeType EmployeeType
+        {
+            get { return _EmployeeType;}
+            set { _EmployeeType = value; }
+        }
 
         public string FirstName {
             get { return _FirstName; }
