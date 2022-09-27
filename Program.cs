@@ -125,18 +125,23 @@ namespace CSharpFundamentals
 
         }
 
-
-        public static void Main(string[] args)
+        public static void TestingifCalculatedWageWillReturn100()
         {
             double testHourlyRate = 10.00;
             double testHoursWorked = 10;
-            double answer = 0;
 
             var employeeOne = new Employee();
 
             Console.WriteLine("Testing if employee wages are correct: ");
-            Console.WriteLine(employeeOne.CalculateRecievedWages(testHourlyRate, testHoursWorked ));
+            Console.WriteLine(employeeOne.CalculateRecievedWages(testHourlyRate, testHoursWorked));
 
+
+
+        }
+
+
+        public static void Main(string[] args)
+        { 
 
         }//Main 
 
