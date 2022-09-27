@@ -98,7 +98,7 @@ namespace CSharpFundamentals
             Console.WriteLine($"Testing to see if this returns one hours: {oneHours} ");
 
         }
-
+/*
         public static void TestingIfResetBalancePropWorkInEmployeeClass()
         {
 
@@ -112,7 +112,7 @@ namespace CSharpFundamentals
             Console.WriteLine($"This should return true: {decision} ");
 
 
-        }
+        }*/
 
         public static void TestingIfEmployeeconstructorWillReturnParamaetersPassedinToIt()
         {
@@ -139,7 +139,8 @@ namespace CSharpFundamentals
 
 
         public static void Main(string[] args)
-        { 
+        {
+            
 
         }//Main 
 
