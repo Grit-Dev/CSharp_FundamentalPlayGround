@@ -137,11 +137,21 @@ namespace CSharpFundamentals
 
         }
 
+        public static void TestingIfEnumWOrksInEmployeeCreatedObject()
+        {
+            //Testing if the enum works
+            var employeeOne = new Employee();
+
+            employeeOne.EmployeeType = EmployeeType.Sales;
+
+            Console.WriteLine($"This employee should be in the sales category: {employeeOne.EmployeeType}");
+
+        }
+
 
         public static void Main(string[] args)
         {
-            
-
+  
         }//Main 
 
     } //Class
