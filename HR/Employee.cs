@@ -75,7 +75,7 @@ namespace FundamentalPlayGround.HR
             set { _HourlyRate = value; }
         }
 
-        public DateTime Birthday
+        public DateTime DOB
         {
             get { return _Birthday; }
             set { _Birthday = value; }
@@ -132,6 +132,150 @@ namespace FundamentalPlayGround.HR
         /// This can be confusing.  
         /// </summary>
         /// <returns></returns>
+        /// 
+
+
+
+        public void CreateEmployeeListOfDetailsWithValidations()
+        {
+
+            var employee = new Employee();
+            var listOfObjects = new List<Employee>();
+
+            bool isTrue = true;
+            string firstName = string.Empty;
+            string lastName = string.Empty;
+            string userInputFirstName = "";
+            string userInputLastName = "";
+            string userInputEmail = "";
+            DateTime DOB = new DateTime();
+            string userInputForDOB = "";
+            bool isTrueForContentsOfEmployee = true;
+
+
+            //Wanted to make this bit stand out: 
+            int numberOfEmployeesToBeAdded = GetHowManyEmployeesToAddValidation();
+            int numberOfEmployeesCounter = numberOfEmployeesToBeAdded;
+            int counter = 1;
+
+
+
+            while (isTrueForContentsOfEmployee)
+            {
+
+
+                while (isTrue)
+                {
+                    Console.WriteLine("Please enter in Your first name: ");
+                    userInputFirstName = Console.ReadLine();
+                    userInputFirstName = userInputFirstName.Trim().ToUpper();
+
+                    if (string.IsNullOrEmpty(userInputFirstName) || string.IsNullOrWhiteSpace(userInputFirstName))
+                    {
+                        Console.WriteLine("you have not entered anything in. Please try again \n");
+                    }
+                    else
+                    {
+                        isTrue = false;
+                    }
+                }
+
+                isTrue = true;
+
+                while (isTrue)
+                {
+                    Console.WriteLine("Please enter in Your last name: ");
+                    userInputLastName = Console.ReadLine();
+                    userInputLastName = userInputLastName.Trim().ToUpper();
+
+                    if (string.IsNullOrEmpty(userInputLastName) || string.IsNullOrWhiteSpace(userInputLastName))
+                    {
+                        Console.WriteLine("you have not entered anything in. Please try again \n");
+                    }
+                    else
+                    {
+                        isTrue = false;
+                    }
+
+                    isTrue = true;
+
+                    while (isTrue)
+                    {
+                        Console.WriteLine("Please enter in Your Email Address: ");
+                        userInputEmail = Console.ReadLine();
+                        userInputEmail = userInputEmail.Trim().ToUpper();
+
+                        if (string.IsNullOrEmpty(userInputEmail) || string.IsNullOrWhiteSpace(userInputEmail))
+                        {
+                            Console.WriteLine("you have not entered anything in. Please try again \n");
+                        }
+                        else
+                        {
+                            isTrue = false;
+                        }
+
+                    }
+
+                    isTrue = true;
+
+                    while (isTrue)
+                    {
+                        Console.WriteLine("Please enter in Your date of birth. Format: 08/01/1993 : ");
+                        userInputForDOB = Console.ReadLine();
+                        userInputForDOB = userInputForDOB.Trim().ToUpper();
+
+                        if (string.IsNullOrEmpty(userInputForDOB) || string.IsNullOrWhiteSpace(userInputForDOB))
+                        {
+                            Console.WriteLine("you have not entered anything in. Please try again \n");
+                        }
+                        else if (!DateTime.TryParse(userInputForDOB, out DateTime userDateHasBeenParsed))
+                        {
+                            Console.WriteLine("This is not in the correct format. Please try again \n");
+                        }
+                        else
+                        {
+                            //Email Passed across here
+                            employee.DOB = userDateHasBeenParsed;
+                            isTrue = false;
+                        }
+
+                    }
+
+                    employee.FirstName = userInputFirstName;
+                    employee.LastName = userInputLastName;
+                    employee.Email = userInputEmail;
+
+
+                    listOfObjects.Add(employee);
+
+                    if (counter == numberOfEmployeesCounter)
+                    {
+                        isTrueForContentsOfEmployee = false;
+                    }
+
+                    //Checking the number of employees
+                    counter++;
+                }
+
+
+                //Final Test to see if listOfObjects is fully populated: 
+                Console.WriteLine();
+                Console.WriteLine();
+
+
+                foreach (var obj in listOfObjects)
+                {
+                    Console.WriteLine(obj.FirstName.ToString());
+                    Console.WriteLine(obj.LastName.ToString());
+                    Console.WriteLine(obj.Email.ToString());
+                    Console.WriteLine(obj.DOB.ToShortDateString());
+                }
+
+            }
+
+        }
+
+
         private int ValidateHowManyEmployeesChecker()
         {
             int howManyUsersUserInput = 0;
@@ -159,7 +303,7 @@ namespace FundamentalPlayGround.HR
 
         }
 
-        public int GetHowManyEmployeesToAddValidation()
+        private int GetHowManyEmployeesToAddValidation()
         {
             bool isTrue = true;
             Employee employeeOne = new Employee();

@@ -153,18 +153,18 @@ namespace CSharpFundamentals
 
         }
 
-/*        public static void TestingIf_ValidateHowManyEmployeeWorks()
-        {
-            Employee employeeOne = new Employee();
-            var answer = employeeOne.ValidateHowManyEmployeesChecker();
+        /*        public static void TestingIf_ValidateHowManyEmployeeWorks()
+                {
+                    Employee employeeOne = new Employee();
+                    var answer = employeeOne.ValidateHowManyEmployeesChecker();
 
 
-            Console.WriteLine("Answer should be 5 in digit form");
-            Console.WriteLine(answer.GetType());
+                    Console.WriteLine("Answer should be 5 in digit form");
+                    Console.WriteLine(answer.GetType());
 
 
-        }
-*/
+                }
+        */
         public static void TestingIf_GetHowManyEmploeesToAddValidation()
         {
             Employee testEmployee = new Employee();
@@ -179,12 +179,33 @@ namespace CSharpFundamentals
 
         }
 
-        /// <summary>
-        /// Coding area to check how many users can be verified: 
-        ///
-        /// </summary>
-        /// <param name="args"></param>
+        public static void TestingIf_5ListOfObjectedAreBeingCreated()
+        {
 
+            var listOfObjects = new List<Employee>();
+            int numberOfEmployeesTest = 5;
+            int counter = 0;
+
+
+            for (counter = 0; counter < numberOfEmployeesTest; counter++)
+            {
+                listOfObjects.Add(new Employee());
+
+            }
+
+            foreach (var item in listOfObjects)
+            {
+                Console.WriteLine(item);
+            }
+
+        }
+
+        public static void TestingIf_CreateEmployeeListOfDetailsWithValidations()
+        {
+            Employee employeeTest = new Employee();
+
+            employeeTest.CreateEmployeeListOfDetailsWithValidations();
+        }
         public static void Main(string[] args)
         {
             //Arrays and use of collections
@@ -196,14 +217,13 @@ namespace CSharpFundamentals
             */
 
 
-            //Testing to see if ValidateHowmanyEmoployeesChecker Works
-
-     
-
+            //Testing to see if ValidateHowmanyEmoployeesChecker
+            //
 
 
+          
+             
 
-        }//Main 
-
+        } //Main
     } //Class
-} //Name-space
+}//Namespace 
