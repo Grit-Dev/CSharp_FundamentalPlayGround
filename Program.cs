@@ -15,6 +15,7 @@ using System.Transactions;
 using System.Xml;
 using System.IO.Pipes;
 using System.Collections;
+using FundamentalPlayGround.OOP_Recap;
 
 namespace CSharpFundamentals
 {
@@ -219,6 +220,11 @@ namespace CSharpFundamentals
 
             //Testing to see if ValidateHowmanyEmoployeesChecker
             //
+
+            var testingDerivedClass = new DerivedClassExampleManager();
+            testingDerivedClass.PrintNameExample();
+            testingDerivedClass.name = "Hello";
+
 
 
           
