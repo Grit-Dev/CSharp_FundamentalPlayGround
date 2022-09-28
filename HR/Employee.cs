@@ -122,6 +122,79 @@ namespace FundamentalPlayGround.HR
             return pHourlyRate * pHoursWorked;
         }
 
+
+        /// <summary>
+        /// I know validations and calculations should be abstracted and separated elsewhere
+        /// This code is purely to test fundamentals and the love of coding :). 
+        /// 
+        /// I also made this private as it does need to be called at all. 
+        /// I can call it in the method. It does not make sense to have something similar
+        /// This can be confusing.  
+        /// </summary>
+        /// <returns></returns>
+        private int ValidateHowManyEmployeesChecker()
+        {
+            int howManyUsersUserInput = 0;
+            bool isTrue = true;
+
+            while (isTrue)
+            {
+
+                try
+                {
+                    Console.WriteLine("How many employees would you like to register? ");
+                    Console.WriteLine("Please ensure you enter in a positive number:");
+                    howManyUsersUserInput = int.Parse(Console.ReadLine());
+                    isTrue = false;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Sorry you did not enter in a digit number. Please try again \n");
+
+
+                }
+            }
+
+            return howManyUsersUserInput;
+
+        }
+
+        public int GetHowManyEmployeesToAddValidation()
+        {
+            bool isTrue = true;
+            Employee employeeOne = new Employee();
+            int answer = 0;
+
+            do
+            {
+
+                answer = employeeOne.ValidateHowManyEmployeesChecker();
+
+                if (answer <= 0)
+                {
+                    Console.WriteLine("You have not entered a positive number.");
+                    Console.WriteLine("Please try again \n");
+
+                }
+                else
+                {
+                    isTrue = false;
+                }
+
+            }
+            while (isTrue);
+
+            Console.WriteLine();
+            Console.WriteLine("Answer should be 5 in digit form:");
+            Console.WriteLine($"The Answer: {answer}");
+            Console.WriteLine($"The type should be an int: {answer.GetType()} \n\n");
+
+            return answer;
+
+
+        }
+
+
         public void PerformWorked()
         {
             HoursWorked++;

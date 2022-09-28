@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FundamentalPlayGround.HR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FundamentalPlayGround.Account
 {
-    public class Account
+    public class Account 
     {
         //Field
         private string _AccountNumber = ""; 

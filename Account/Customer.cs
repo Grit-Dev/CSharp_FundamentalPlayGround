@@ -7,7 +7,11 @@ using System.Threading.Tasks;
 
 namespace FundamentalPlayGround.Account
 {
-    public class Customer
+    /// <summary>
+    /// Come back to this and add some cool functionality
+    /// </summary>
+    public class Customer : Account
+    
     {
         private int _CustomerID; 
         private string _Name = ""; 

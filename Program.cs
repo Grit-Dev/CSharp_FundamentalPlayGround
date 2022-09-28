@@ -7,11 +7,14 @@
 
 using FundamentalPlayGround;
 using FundamentalPlayGround.HR;
+using FundamentalPlayGround.Account;
 using System.Diagnostics.Metrics;
 using System.Net.WebSockets;
 using System.Security.Cryptography.X509Certificates;
 using System.Transactions;
 using System.Xml;
+using System.IO.Pipes;
+using System.Collections;
 
 namespace CSharpFundamentals
 {
@@ -30,9 +33,10 @@ namespace CSharpFundamentals
             set { _FirstName = value; }
         }
 
-        public int Age {
+        public int Age
+        {
             get { return _age; }
-            set { _age = value; } 
+            set { _age = value; }
         }
 
 
@@ -40,7 +44,7 @@ namespace CSharpFundamentals
         public void PerformWork()
         {
             Console.WriteLine(FirstName);
-            
+
         }
 
 
@@ -99,21 +103,21 @@ namespace CSharpFundamentals
             Console.WriteLine($"Testing to see if this returns one hours: {oneHours} ");
 
         }
-/*
-        public static void TestingIfResetBalancePropWorkInEmployeeClass()
-        {
+        /*
+                public static void TestingIfResetBalancePropWorkInEmployeeClass()
+                {
 
-            //Testing if book get variable will return true
-            bool decision = false;
+                    //Testing if book get variable will return true
+                    bool decision = false;
 
-            Employee employeeOneTest = new Employee();
+                    Employee employeeOneTest = new Employee();
 
-            decision = employeeOneTest.ResetBalance;
+                    decision = employeeOneTest.ResetBalance;
 
-            Console.WriteLine($"This should return true: {decision} ");
+                    Console.WriteLine($"This should return true: {decision} ");
 
 
-        }*/
+                }*/
 
         public static void TestingIfEmployeeconstructorWillReturnParamaetersPassedinToIt()
         {
@@ -149,10 +153,56 @@ namespace CSharpFundamentals
 
         }
 
+/*        public static void TestingIf_ValidateHowManyEmployeeWorks()
+        {
+            Employee employeeOne = new Employee();
+            var answer = employeeOne.ValidateHowManyEmployeesChecker();
+
+
+            Console.WriteLine("Answer should be 5 in digit form");
+            Console.WriteLine(answer.GetType());
+
+
+        }
+*/
+        public static void TestingIf_GetHowManyEmploeesToAddValidation()
+        {
+            Employee testEmployee = new Employee();
+
+            var answer = testEmployee.GetHowManyEmployeesToAddValidation();
+            Console.WriteLine($"Testing answer: {answer}");
+
+
+
+
+
+
+        }
+
+        /// <summary>
+        /// Coding area to check how many users can be verified: 
+        ///
+        /// </summary>
+        /// <param name="args"></param>
 
         public static void Main(string[] args)
         {
-  
+            //Arrays and use of collections
+            /*
+                        var myIntArray = new int[] { };
+                        DateTime myDateAndTime = new DateTime();
+                        string[] myStringArray = new string[] { };
+                        Console.WriteLine(myStringArray[0]);
+            */
+
+
+            //Testing to see if ValidateHowmanyEmoployeesChecker Works
+
+     
+
+
+
+
         }//Main 
 
     } //Class
