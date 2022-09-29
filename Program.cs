@@ -207,6 +207,25 @@ namespace CSharpFundamentals
 
             employeeTest.CreateEmployeeListOfDetailsWithValidations();
         }
+
+        public static void TestingIf_AFilePathIsFoundInTheReadingAndWritiingFolder()
+        {
+
+            string directory = @"C:\\Users\\Paul.McGinley\\source\\repos\\FundamentalPlayGround\\ReadingandWritingtoFiles\\myTestingTextFile.txt";
+            string fileName = "employees.txt";
+
+            string path = $"{directory}";
+            bool existingFileFound = File.Exists(path);
+
+            if (existingFileFound)
+            {
+                Console.WriteLine("This test has worked");
+            }
+            else
+            {
+                Console.WriteLine("This has not worked");
+            }
+        }
         public static void Main(string[] args)
         {
             //Arrays and use of collections
@@ -221,22 +240,14 @@ namespace CSharpFundamentals
             //Testing to see if ValidateHowmanyEmoployeesChecker
             //
 
-            var testingDerivedClass = new DerivedClassExampleManager();
-            testingDerivedClass.PrintNameExample();
-            testingDerivedClass.name = "Hello";
+            string directory = @"C:\\Users\\Paul.McGinley\\source\\repos\\FundamentalPlayGround\\ReadingandWritingtoFiles\\myTestingTextFile.txt";
+            string fileName = "employees.txt";
 
-
-            
-
+            string path = $"{directory}";
 
 
 
 
-
-
-
-          
-             
 
         } //Main
     } //Class
