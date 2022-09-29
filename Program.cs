@@ -225,6 +225,20 @@ namespace CSharpFundamentals
             testingDerivedClass.PrintNameExample();
             testingDerivedClass.name = "Hello";
 
+            var employeeTestingObj = new Employee();
+
+            employeeTestingObj.CalculateRecievedWages();
+            employeeTestingObj.CreateEmployeeListOfDetailsWithValidations();
+            employeeTestingObj.Email = "PaulMcGinley16@outlook.com".ToLower();
+
+
+            
+
+
+
+
+
+
 
 
           

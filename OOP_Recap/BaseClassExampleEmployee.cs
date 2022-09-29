@@ -18,7 +18,7 @@ namespace FundamentalPlayGround.OOP_Recap
 }
 
 
-//For Virtual key word if you do wnt to use this class instead of hiding it using the base 
+//For Virtual key word if you do want to use this class instead of hiding it using the base 
 /*
 namespace FundamentalPlayGround.OOP_Recap
 {
