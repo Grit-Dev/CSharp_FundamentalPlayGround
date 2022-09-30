@@ -211,8 +211,8 @@ namespace CSharpFundamentals
         public static void TestingIf_AFilePathIsFoundInTheReadingAndWritiingFolder()
         {
 
-            string directory = @"C:\\Users\\Paul.McGinley\\source\\repos\\FundamentalPlayGround\\ReadingandWritingtoFiles\\myTestingTextFile.txt";
-            string fileName = "employees.txt";
+            /*string directory = @"C:\\Users\\[ENTER USERNAME]\\source\\repos\\FundamentalPlayGround\\ReadingandWritingtoFiles\\myTestingTextFile.txt";
+            */string fileName = "employees.txt";
 
             string path = $"{directory}";
             bool existingFileFound = File.Exists(path);
@@ -240,14 +240,30 @@ namespace CSharpFundamentals
             //Testing to see if ValidateHowmanyEmoployeesChecker
             //
 
-            string directory = @"C:\\Users\\Paul.McGinley\\source\\repos\\FundamentalPlayGround\\ReadingandWritingtoFiles\\myTestingTextFile.txt";
+            //Insert your name in the file path string named directory
+/*
+            string directory = @"C:\\Users\\"YOUR USER NAME "\\source\\repos\\FundamentalPlayGround\\ReadingandWritingtoFiles\\myTestingTextFile.txt";
             string fileName = "employees.txt";
 
             string path = $"{directory}";
+            string [] fileReadAllLinesInStringForm = File.ReadAllLines(directory);
+
+
+            Console.WriteLine("Testing if this will read the file correctly: ");
+            Console.WriteLine(fileReadAllLinesInStringForm[0]);
+
+            File.WriteAllText(directory, "OMG I CANNOT BELIEVE IT".ToLower());
+
+
+            Console.WriteLine("Testing if this will read the file correctly with added text string: ");
+            Console.WriteLine(fileReadAllLinesInStringForm[0]);
+            Console.WriteLine(fileReadAllLinesInStringForm[1]);
+            Console.WriteLine(fileReadAllLinesInStringForm[1]);
 
 
 
 
+*/
 
         } //Main
     } //Class
